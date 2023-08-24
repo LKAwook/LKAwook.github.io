@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>text</title>
+    <meta name="keywords" content="text">
+  </head>
+  <body>
+    <form>
+        <label for="textbox">请输入文字：</label>
+        <input type="text" id="textbox" name="textbox">
+    </form>
+</body>
+</html>
