@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LKAwook的精神世界</title>
+</head>
+<body>
+    <div id="post">
+        <h2>7/5</h2>
+        <p>LKAwook的第一次尝试！！！</p>
+        <button id="likeButton">Like</button> <span id="likeCount">0</span>
+    </div>
+
+    <div id="comments">
+        <h3>Comments</h3>
+        <textarea id="commentInput" placeholder="Write a comment..."></textarea>
+        <button id="submitComment">Comment</button>
+        <div id="commentList"></div>
+    </div>
+
+    <script>
+        let likeCount = 0;
+        document.getElementById('likeButton').addEventListener('click', function() {
+            likeCount++;
+            document.getElementById('likeCount').textContent = likeCount;
+        });
+
+        let comments = [];
+
+        document.getElementById('submitComment').addEventListener('click', function() {
+            const commentInput = document.getElementById('commentInput');
+            const commentText = commentInput.value;
+            if (commentText.trim() !== '') {
+                comments.push(commentText);
+                commentInput.value = ''; // Clear input after submitting
+                updateCommentList();
+            }
+        });
+
+        function updateCommentList() {
+            const commentList = document.getElementById('commentList');
+            commentList.innerHTML = ''; // Clear existing comments
+            comments.forEach(comment => {
+                const commentElement = document.createElement('div');
+                commentElement.textContent = comment;
+                commentList.appendChild(commentElement);
+            });
+        }
+    </script>
+</body>
+</html>
