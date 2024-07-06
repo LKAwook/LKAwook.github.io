@@ -65,3 +65,49 @@ footer {
     z-index: 10;
     cursor: pointer;
 }
+
+.block-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 100%; /* 确保链接宽度占满其父元素 */
+    /* 其他样式 */
+}
+
+.block {
+    width: 60%; /* 或其他宽度 */
+    max-width: 800px; /* 保持最大宽度限制 */
+    margin-left: auto; /* 水平居中 */
+    margin-right: auto; /* 水平居中 */
+    /* 其他样式 */
+}
+.block:hover {
+    /* 悬停效果保持不变 */
+}
+
+/* 基本重置 */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* 容器：设置最大宽度和页面中心 */
+.container {
+    max-width: 800px; /* 根据需要调整最大宽度 */
+    margin: 0 auto; /* 上下0，左右自动（水平居中） */
+    padding: 0 20px; /* 左右留白 */
+}
+
+/* 文章内容 */
+.blog-post {
+    margin: 100px 0; /* 与屏幕顶部和底部的距离 */
+    line-height: 1.6; /* 行高 */
+    font-family: Arial, sans-serif; /* 字体 */
+}
+
+/* 媒体查询：响应式设计 */
+@media (max-width: 820px) {
+    .container {
+        padding: 0; /* 在较小屏幕上移除留白 */
+    }
+}
