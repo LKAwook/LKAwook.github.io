@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #ffffff;
+    color: #000000;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.parent-element {
+    display: grid;
+    place-items: center;
+}
+
+section {
+    margin: 30px 0; /* 外边距 */
+    padding: 20px; /* 内边距 */
+    border: none; 
+   /* 去除边框，因为我们将使用.block类样式 */
+}
+
+footer {
+    background: #ffffff;
+    color: #aaa;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 0;
+    width: 100%;
+}
+
+
+.block {
+    width: 60%;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: none; /* 去除边框 */
+    border-radius: 5px; /* 保留圆角边框大小 */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 加重阴影效果 */
+}
+
+.block:hover {
+    transform: scale(1.05);
+    z-index: 10;
+    cursor: pointer;
+}
